@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "npx serve . --listen 3000",
-    "dev": "npm run serve"
+    "dev": "npm run serve",
+    "prepare": "git config core.hooksPath .githooks"
   }
 }

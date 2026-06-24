@@ -1,0 +1,21 @@
+#!/bin/sh
+# Push main to GitHub after each commit so Vercel deploys automatically.
+# Requires the repo to be connected in the Vercel dashboard (see README).
+# Skip with: SKIP_VERCEL=1 git commit
+
+if [ -n "$SKIP_VERCEL" ]; then
+  exit 0
+fi
+
+branch=$(git symbolic-ref --short HEAD 2>/dev/null) || exit 0
+if [ "$branch" != "main" ]; then
+  exit 0
+fi
+
+if ! git remote get-url origin >/dev/null 2>&1; then
+  echo "post-commit: no origin remote, skipping Vercel deploy push"
+  exit 0
+fi
+
+echo "post-commit: pushing main to origin (triggers Vercel deploy)..."
+git push origin main
