@@ -1,0 +1,12 @@
+:root {
+  --dark: #0f1923;
+  --dark2: #0a1218;
+  --accent: #2ab8a8;
+  --light-bg: #f4f6f7;
+  --ink: #1a1a1a;
+  --mid: #444;
+  --muted: #777;
+  --white: #fff;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-med: 220ms;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company</title>
+<meta name="description" content="Company website — coming soon.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Company">
+<meta property="og:description" content="Company website — coming soon.">
+<meta property="og:url" content="/">
+<meta property="og:image" content="/favicon.svg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Company">
+<meta name="twitter:description" content="Company website — coming soon.">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: #d8dce0;
+    min-height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 520px;
+    background: var(--light-bg);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+  }
+
+  .hero {
+    background: var(--dark);
+    color: var(--white);
+    padding: 48px 40px 40px;
+    position: relative;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent);
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .body {
+    padding: 32px 40px 40px;
+  }
+
+  .body p {
+    color: var(--mid);
+    margin-bottom: 16px;
+  }
+
+  .body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s var(--ease-standard) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+
+  @media (max-width: 480px) {
+    .hero, .body { padding-left: 24px; padding-right: 24px; }
+    h1 { font-size: 1.875rem; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <header class="hero">
+      <p class="eyebrow">Placeholder</p>
+      <h1>Company</h1>
+    </header>
+    <div class="body">
+      <p>This site is a starter shell — ready for git, Vercel, and a real name when you have one.</p>
+      <p class="status"><span class="status-dot" aria-hidden="true"></span> Coming soon</p>
+    </div>
+  </main>
+</body>
+</html>
