@@ -1,0 +1,75 @@
+/*
+ * Theme palette — the only file to edit when adding or swapping themes.
+ * Each palette sets 4 core values per mode; tokens.css derives everything else.
+ *
+ * Active brand palette: clay (light default)
+ * Other palettes kept for reference — set data-palette on <html> to try them.
+ */
+
+/* Nature — https://tweakcn.com/r/themes/nature.json */
+[data-palette="nature"][data-theme="light"] {
+  color-scheme: light;
+  --theme-bg: oklch(0.9711 0.0074 80.7211);
+  --theme-fg: oklch(0.3000 0.0358 30.2042);
+  --theme-accent: oklch(0.5234 0.1347 144.1672);
+  --theme-muted: oklch(0.4495 0.0486 39.2110);
+}
+
+[data-palette="nature"][data-theme="dark"] {
+  color-scheme: dark;
+  --theme-bg: oklch(0.2683 0.0279 150.7681);
+  --theme-fg: oklch(0.9423 0.0097 72.6595);
+  --theme-accent: oklch(0.6731 0.1624 144.2083);
+  --theme-muted: oklch(0.8579 0.0174 76.0955);
+}
+
+/* Blue — Ocean Breeze base (tweakcn) with blue accent */
+[data-palette="blue"][data-theme="light"] {
+  color-scheme: light;
+  --theme-bg: oklch(0.9751 0.0127 244.2507);
+  --theme-fg: oklch(0.3729 0.0306 259.7328);
+  --theme-accent: oklch(0.6723 0.1606 244.9955);
+  --theme-muted: oklch(0.5510 0.0234 264.3637);
+}
+
+[data-palette="blue"][data-theme="dark"] {
+  color-scheme: dark;
+  --theme-bg: oklch(0.2077 0.0398 265.7549);
+  --theme-fg: oklch(0.8717 0.0093 258.3382);
+  --theme-accent: oklch(0.6692 0.1607 245.0110);
+  --theme-muted: oklch(0.7118 0.0129 286.0665);
+}
+
+/* Consulting — data platform + consulting (warm + professional blue) */
+[data-palette="consulting"][data-theme="light"] {
+  color-scheme: light;
+  --theme-bg: oklch(0.982 0.007 240);
+  --theme-fg: oklch(0.32 0.035 258);
+  --theme-accent: oklch(0.52 0.12 245);
+  --theme-muted: oklch(0.50 0.025 260);
+}
+
+[data-palette="consulting"][data-theme="dark"] {
+  color-scheme: dark;
+  --theme-bg: oklch(0.22 0.025 260);
+  --theme-fg: oklch(0.92 0.008 250);
+  --theme-accent: oklch(0.62 0.14 245);
+  --theme-muted: oklch(0.68 0.015 255);
+}
+
+/* Clay — warm neutrals + terracotta (Claude-inspired, consulting-tuned) */
+[data-palette="clay"][data-theme="light"] {
+  color-scheme: light;
+  --theme-bg: oklch(0.982 0.006 95);
+  --theme-fg: oklch(0.30 0.028 95);
+  --theme-accent: oklch(0.58 0.11 42);
+  --theme-muted: oklch(0.52 0.012 95);
+}
+
+[data-palette="clay"][data-theme="dark"] {
+  color-scheme: dark;
+  --theme-bg: oklch(0.24 0.008 100);
+  --theme-fg: oklch(0.90 0.012 95);
+  --theme-accent: oklch(0.66 0.12 40);
+  --theme-muted: oklch(0.72 0.014 95);
+}

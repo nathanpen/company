@@ -1,12 +1,20 @@
+/*
+ * Semantic tokens — derived from the 4-value theme palette.
+ * Components should use these names only, never --theme-* directly.
+ */
+
 :root {
-  --dark: #0f1923;
-  --dark2: #0a1218;
-  --accent: #2ab8a8;
-  --light-bg: #f4f6f7;
-  --ink: #1a1a1a;
-  --mid: #444;
-  --muted: #777;
-  --white: #fff;
-  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --dur-med: 220ms;
+  --background: var(--theme-bg);
+  --foreground: var(--theme-fg);
+  --primary: var(--theme-accent);
+  --primary-foreground: color-mix(in srgb, white 85%, var(--theme-bg));
+  --foreground-muted: var(--theme-muted);
+  --secondary: color-mix(in srgb, var(--theme-fg) 5%, var(--theme-bg));
+  --secondary-foreground: var(--theme-fg);
+  --surface: color-mix(in srgb, var(--theme-fg) 3%, var(--theme-bg));
+  --border: color-mix(in srgb, var(--theme-fg) 12%, var(--theme-bg));
+  --ring: color-mix(in srgb, var(--theme-accent) 40%, transparent);
+  --grid-line: color-mix(in srgb, var(--theme-fg) 10%, transparent);
+  --title-gradient-mid: color-mix(in srgb, var(--theme-fg) 90%, transparent);
+  --title-gradient-end: color-mix(in srgb, var(--theme-fg) 70%, transparent);
 }
